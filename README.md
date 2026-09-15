@@ -2,14 +2,27 @@
 
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-![Seaborn](https://img.shields.io/badge/Seaborn-Visualization-4C72B0?style=for-the-badge&logo=python&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+[//]: # (Badges sections)
+![Project](https://img.shields.io/badge/Project-Vendor%20Performance%20Analytics-0B1F3A?style=for-the-badge)
+![SQLite](https://img.shields.io/badge/SQLite-Inventory%20DB-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![Python](https://img.shields.io/badge/Python-EDA%20%26%20Analysis-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=111111)
+![Status](https://img.shields.io/badge/Status-Completed-2E7D32?style=for-the-badge)
+<img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=for-the-badge" alt="Contributions">
+<img src="https://img.shields.io/badge/Visualization-Seaborn%20%26%20Matplotlib-4C72B0?style=for-the-badge" alt="Visualization">
+<img src="https://img.shields.io/badge/Business_Intelligence-Power%20BI-0078D4?style=for-the-badge&logo=powerbi&logoColor=white" alt="Business Intelligence">
+<img src="https://img.shields.io/badge/Pricing_Optimization-FF6F00?style=for-the-badge&logo=target&logoColor=white" alt="Pricing Optimization">
+<img src="https://img.shields.io/badge/Dataset-Inventory%20Data-107C41?style=for-the-badge&logo=databricks&logoColor=white" alt="Dataset">
+<img src="https://img.shields.io/badge/Aggregated_Summary-Table-8E44AD?style=for-the-badge" alt="Aggregated Summary Table">
+<img src="https://img.shields.io/badge/Total_Sales-441.41M-FF6B6B?style=for-the-badge" alt="Total Sales">
+<img src="https://img.shields.io/badge/Gross_Profit-134.07M-22C55E?style=for-the-badge" alt="Gross Profit">
+<img src="https://img.shields.io/badge/Profit_Margin-38.72%25-1ABC9C?style=for-the-badge" alt="Profit Margin">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=2E9EF7&center=true&vCenter=true&width=700&lines=Exploratory+Data+Analysis+%F0%9F%94%8D;Vendor+Profitability+Insights+%F0%9F%92%B0;Pricing+%26+Promotion+Optimization+%F0%9F%93%88;Built+with+Python+%2B+SQL+%2B+Seaborn+%F0%9F%90%8D" alt="Typing SVG" />
+<br/><br/>
+
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2800&pause=800&color=2E9EF7&center=true&vCenter=true&width=760&lines=Vendor+Performance+Intelligence;Exploratory+Data+Analysis+%F0%9F%94%8D;Power+BI+Dashboard+%F0%9F%93%8A;Pricing+%26+Promotion+Optimization+%F0%9F%93%88;Python+%2B+SQL+%2B+Seaborn+%F0%9F%90%8D" alt="Animated typing banner" />
+</div>
 
 **An end-to-end data analytics project that transforms raw inventory, purchase, and sales data into actionable vendor performance insights — helping businesses optimize pricing and promotional strategies.** 🚀
 
@@ -24,6 +37,7 @@
 - [🗂️ Repo / Project Structure](#️-repo--project-structure)
 - [🗄️ Database Schema](#️-database-schema)
 - [🔧 Tech Stack](#-tech-stack)
+- [📊 Power BI Dashboard](#-power-bi-dashboard)
 - [📈 Workflow Pipeline](#-workflow-pipeline)
 - [🔍 Exploratory Data Analysis](#-exploratory-data-analysis)
   - [📌 1. Dataset Overview](#-1-dataset-overview)
@@ -54,7 +68,7 @@ This project performs a deep **Exploratory Data Analysis (EDA)** on a beverage i
 - 📦 **Inventory turnover** efficiency
 - 🎁 **Brands needing promotional push** (low sales + high margins)
 
-The analysis culminates in a **reusable aggregated summary table** (`vendor_sales_summary`) that powers fast dashboarding and reporting.
+The analysis culminates in a **reusable aggregated summary table** (`vendor_sales_summary`) that powers both the **Power BI dashboard** and business reporting.
 
 ---
 
@@ -68,6 +82,7 @@ Key goals:
 2. Detect brands with **low sales but high margins** → prime targets for marketing 📣
 3. Detect brands with **high sales but low margins** → prime targets for pricing 📈
 4. Build a **pre-aggregated table** to avoid expensive joins in dashboards ⚡
+5. Surface **executive KPIs** through an interactive Power BI dashboard 📊
 
 ---
 
@@ -78,6 +93,9 @@ Key goals:
 │
 ├── 📁 data/
 │   └── 🗄️ inventory.db                # SQLite database (source of truth)
+│
+├── 📁 dashboard/
+│   └── 📊 vendor_performance.pbix    # Power BI dashboard file
 │
 ├── 📁 logs/
 │   └── 📝 get_vendor_summary.log     # Pipeline execution logs
@@ -90,8 +108,13 @@ Key goals:
 │   ├── 🐍 ingestion_db.py            # DB ingestion helper
 │   └── 🐍 get_vendor_summary.py      # ETL: builds vendor_sales_summary
 │
-├── 📁 assets/
-│   └── 🖼️ charts/                    # Saved plots & screenshots
+├── 📁 images/
+│   ├── 🖼️ BI File.png           # Power BI dashboard
+│   ├── 🖼️ heatmap.png           # Correlation heatmap
+│   ├── 🖼️ output.png            # Distribution plots
+│   ├── 🖼️ promotion.png         # Promotion candidates scatter
+|   ├── 🖼️ boxplot.png           # Data Range plots
+|   ├── 🖼️ sales.png             # Overall sales summary
 │
 ├── 📄 README.md
 ```
@@ -133,14 +156,89 @@ erDiagram
 | 🗄️ Database | SQLite3 |
 | 📊 Visualization | Matplotlib, Seaborn |
 | 📈 Statistics | SciPy |
+| 📊 BI & Dashboards | **Power BI** ✨ |
 | 📓 Environment | Jupyter Notebook |
 | 📝 Logging | Python `logging` |
 
 ---
 
+## 📊 Power BI Dashboard
+
+An interactive **Comprehensive Vendor Performance Dashboard** was built in Power BI, powered by the `vendor_sales_summary` aggregated table.
+
+<div align="center">
+  <img src="Images/BI File.png" alt="Comprehensive Vendor Performance Dashboard" width="1000"/>
+  <p><em>Figure — Interactive Power BI dashboard with KPIs, vendor contribution, and performance analysis</em></p>
+</div>
+
+### 🎯 Executive KPIs
+
+| 📊 Metric | 💰 Value | 📝 Insight |
+|-----------|---------|-----------|
+| **Total Sales** | **$441.41M** | Annual revenue across all vendors & stores |
+| **Total Purchase** | **$307.34M** | Total procurement cost |
+| **Gross Profit** | **$134.07M** | Net profit after purchase cost |
+| **Profit Margin** | **38.72%** | Healthy margin — above beverage industry average |
+| **Unsold Capital** | **$2.71M** | Capital locked in dead stock — optimization target ⚠️ |
+
+### 🥇 Top 10 Vendors by Sales
+
+| Rank | Vendor | Sales |
+|------|--------|-------|
+| 🥇 | DIAGEO NORTH AMERICA INC | $68M |
+| 🥈 | MARTIGNETTI COMPANIES | $39M |
+| 🥉 | PERNOD RICARD USA | $32M |
+| 4 | JIM BEAM BRANDS COMPANY | $31M |
+| 5 | BACARDI USA INC | $25M |
+| 6 | CONSTELLATION BRANDS INC | $24M |
+| 7 | E & J GALLO WINERY | $18M |
+| 8 | BROWN-FORMAN CORP | $18M |
+| 9 | ULTRA BEVERAGE COMPANY LLP | $17M |
+| 10 | M S WALKER INC | $15M |
+
+> 💡 **Top 10 vendors contribute 65.7% of total purchases** — high concentration risk but also clear negotiation leverage.
+
+### 🏆 Top Brands by Sales
+
+| Rank | Brand | Sales |
+|------|-------|-------|
+| 🥇 | Jack Daniels No 7 Black | $8.0M |
+| 🥈 | Tito's Handmade Vodka | $7.4M |
+| 🥉 | Grey Goose Vodka | $7.2M |
+| 4 | Capt Morgan Spiced Rum | $6.4M |
+| 5 | Absolut 80 Proof | $6.2M |
+| 6 | Jameson Irish Whiskey | $5.7M |
+| 7 | Ketel One Vodka | $5.1M |
+| 8 | Baileys Irish Cream | $4.2M |
+| 9 | Kahlua | $3.6M |
+| 10 | Tanqueray | $3.5M |
+
+### ⚠️ Low Performing Vendors (Score < 0.8)
+
+| Vendor | Score |
+|--------|-------|
+| Dunn Wine Brokers | 0.77 |
+| Circa Wines | 0.76 |
+| PARK STREET IMPORTS LLC | 0.75 |
+| HIGHLAND WINE MERCHANTS LLC | 0.71 |
+| ALISA CARR BEVERAGES | 0.62 |
+
+> 🎯 **Action:** Review contracts — score below 0.8 signals poor turnover / margin / delivery mix.
+
+### 📉 Low Performing Brands Analysis
+
+The scatter plot (bottom-right of dashboard) plots **Total Sales vs. Avg Profit Margin**, with:
+
+- 🔴 **Red dots** = target brands for promotion (low sales + high margin)
+- 🔵 **Blue dots** = healthy performers
+
+**This visually confirms the 198 target brands identified in the EDA phase.** ✅
+
+---
+
 ## 📈 Workflow Pipeline
 
-The pipeline flows from raw database → aggregated summary → EDA → business insights.
+The pipeline flows from raw database → aggregated summary → EDA → Power BI dashboard → business insights.
 
 ### 🔁 Pipeline Diagram (Mermaid)
 
@@ -152,8 +250,10 @@ flowchart TD
     D --> E[🧹 clean_data: dtype fix, fillna, strip]
     E --> F[🧮 Feature Engineering:<br/>GrossProfit, ProfitMargin,<br/>StockTurnover, SalesToPurchaseRatio]
     F --> G[💾 vendor_sales_summary table]
-    G --> H[📊 EDA & Visualization]
-    H --> I[🎯 Business Insights]
+    G --> H[📊 Power BI Dashboard]
+    G --> I[🔍 EDA & Visualization]
+    H --> J[🎯 Business Insights]
+    I --> J
 ```
 
 ### 🧩 Pipeline Steps
@@ -167,7 +267,8 @@ flowchart TD
 | 5️⃣ | Feature engineering (4 new columns) | Pandas |
 | 6️⃣ | Ingest to `vendor_sales_summary` | `ingestion_db.py` |
 | 7️⃣ | Visual EDA & analysis | Matplotlib / Seaborn |
-| 8️⃣ | Business insight extraction | Pandas |
+| 8️⃣ | Build interactive dashboard | **Power BI** ✨ |
+| 9️⃣ | Business insight extraction | Pandas |
 
 ### 🧮 Feature Engineering Formulas
 
@@ -283,6 +384,7 @@ df.describe().T
 | StockTurnover | 0 | 0.81 | 0.98 | 1.04 | 274.50 |
 
 **Key Observations 🚨:**
+
 - Negative `GrossProfit` and `-∞` `ProfitMargin` → some SKUs sell at a loss.
 - Extreme `FreightCost` variance → logistics inefficiencies.
 - `StockTurnover > 1` → some products sold more than purchased (fulfilled from older stock).
@@ -306,6 +408,7 @@ plt.show()
 ```
 
 **Findings 📊:**
+
 - 📈 Most columns are **right-skewed** with long tails (few mega-vendors).
 - 📦 `Volume` is **multi-modal** (750 mL dominates).
 - 💰 `ProfitMargin` shows a **left tail** going negative → loss-making SKUs.
@@ -357,6 +460,7 @@ plt.show()
 ```
 
 **Findings 🏆:**
+
 - 🥇 `BROWN-FORMAN CORP` and `DIAGEO NORTH AMERICA INC` dominate vendor counts.
 - 🍾 Top SKUs (e.g., *Jack Daniels No 7 Black*, *Tito's Handmade Vodka*) appear in nearly every store.
 
@@ -372,6 +476,11 @@ sns.heatmap(correlation_matrix, annot=True, fmt='.2f',
 plt.title("Correlation Heatmap")
 plt.show()
 ```
+
+<div align="center">
+  <img src="Images/heatmap.png" alt="Correlation Heatmap" width="800"/>
+  <p><em>Figure — Correlation heatmap of all numerical features</em></p>
+</div>
 
 **Correlation Insights 🔗:**
 
@@ -403,6 +512,7 @@ df = pd.read_sql_query("""
 ```
 
 **Result:**
+
 - ❌ Removed: 2,128 rows
 - ✅ Kept: **8,564 rows** (80.1% of original)
 
@@ -477,27 +587,48 @@ high_margin_threshold = brand_performance['ProfitMargin'].quantile(0.85)        
 
 ## 📉 Visual Insights
 
-### 🔥 Correlation Heatmap Highlights
+### 🎨 Power BI — Comprehensive Vendor Dashboard
 
-- ✅ **PurchaseQty ↔ SalesQty** = `0.999` → perfect inventory turnover
-- ⚠️ **PurchasePrice ↔ GrossProfit** = `-0.016` → price barely affects profit
-- ⚠️ **ProfitMargin ↔ TotalSalesPrice** = `-0.179` → higher price = lower margin
-- ⚠️ **StockTurnover ↔ ProfitMargin** = `-0.055` → fast movers ≠ high margin
+<div align="center">
+  <img src="Images/BI File.png" alt="Power BI Dashboard" width="1000"/>
+  <p><em>Interactive dashboard: KPIs • Vendor contribution • Top performers • Low performers</em></p>
+</div>
 
-### 📊 Distribution Insights
+### 🔥 Correlation Heatmap
 
-- 📈 Sales & Purchase quantities are **right-skewed** (some high-volume anchors)
-- 📉 Freight costs range from **$0.09 → $257,032** → big logistics variance
-- 🚨 Volume has outliers up to **20,000 mL** (bulk orders)
+<div align="center">
+  <img src="Images/heatmap.png" alt="Correlation Heatmap" width="800"/>
+</div>
+
+### 📊 Distribution Plots
+
+<div align="center">
+  <img src="Images/output.png" alt="Distribution Plots" width="800"/>
+</div>
 
 ### 🎨 Scatter Plot — Promotion Candidates
 
-- 🔵 Blue dots = all brands
-- 🔴 Red dots = **target brands** (low sales + high margin quadrant)
+<div align="center">
+  <img src="Images/promotion.png" alt="Promotion Candidates" width="800"/>
+  <p><em>🔴 Red dots = target brands (low sales + high margin) | 🔵 Blue dots = healthy performers</em></p>
+</div>
 
 ---
 
 ## ✅ Conclusion
+
+### 📊 Dashboard Highlights
+
+| 🔎 KPI | 📈 Value | 💡 Takeaway |
+|--------|---------|-------------|
+| Total Sales | $441.41M | Strong annual revenue |
+| Total Purchase | $307.34M | ~70% of sales as COGS |
+| Gross Profit | $134.07M | Healthy profitability |
+| Profit Margin | 38.72% | Above beverage industry avg (~30%) |
+| Unsold Capital | $2.71M | ⚠️ Optimization opportunity |
+| Top 10 Vendor Share | 65.7% | ⚠️ High concentration risk |
+
+### 🔎 Key Findings
 
 | 🔎 Finding | 💡 Business Impact |
 |------------|---------------------|
@@ -515,6 +646,8 @@ high_margin_threshold = brand_performance['ProfitMargin'].quantile(0.85)        
 3. **Reprice** high-sales-low-margin brands 🏷️
 4. **Discontinue** consistently loss-making SKUs 🗑️
 5. **Leverage the summary table** for BI dashboards (Power BI / Tableau) ⚡
+6. **Reduce vendor concentration risk** — diversify beyond top 10 🧩
+7. **Unlock $2.71M** in dead stock via targeted markdowns 📦
 
 ---
 
@@ -525,7 +658,7 @@ high_margin_threshold = brand_performance['ProfitMargin'].quantile(0.85)        
 - [ ] 📉 **Vendor Segmentation** — KMeans/DBSCAN on profitability & turnover
 - [ ] 🚚 **Freight Optimization** — regression on freight cost drivers
 - [ ] 🎁 **Promotion ROI Simulation** — measure uplift from targeting the 198 brands
-- [ ] 📊 **Interactive Dashboard** — Streamlit or Power BI with live `inventory.db`
+- [ ] 📊 **Publish Power BI to Service** — share live interactive dashboard link
 - [ ] 🧪 **A/B Testing** — pilot promo campaigns on top target brands
 - [ ] ⚙️ **Automated Pipeline** — schedule `get_vendor_summary.py` with Airflow / cron
 - [ ] 🧼 **Data Quality Layer** — add Great Expectations validation
@@ -538,7 +671,7 @@ Contributions welcome! 🎉
 
 ```bash
 # 1. Fork & clone
-git clone https://github.com/RajayJain/vendor-performance-analysis.git
+git clone https://github.com/rajay-jain/vendor-performance-analysis.git
 
 # 2. Create a feature branch
 git checkout -b feature/amazing-insight
@@ -552,6 +685,7 @@ git push origin feature/amazing-insight
 
 ---
 
+
 <div align="center">
 
 ### 🌟 If you found this useful, give it a star! ⭐
@@ -561,4 +695,3 @@ git push origin feature/amazing-insight
 **Made with ❤️ by [Rajay Jain](https://github.com/RajayJain)**
 
 </div>
-
